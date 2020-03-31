@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Calculer vos Pertes de Charges</h1>
+    </div>
+    
+    <div class="middle">
+        <h2>Elements de l'écoulement</h2>
+        <br>
+        <div class="container">
+            <form class="ban" method="POST">
+                
+            {{ form.as_p }}
+            {% csrf_token %}
+
+            <input type="submit" class="btn btn_primary" value="Calculer">
+            </form>
+        
+        </div>
+
+    </div>
+
+    <div class="middlet">
+       <p>
+        Calcul des pertes de charge des fluides en écoulement en charge dans les conduites circulaires (écoulement laminaire et turbulent). <br>
+        <br> Paramètres: <br>
+        Diamètre, Longeur et Ruguosité en(m) <br>
+        Débit massique en(kg/s)<br>
+        Viscosité dynamique en(kg/m/s)<br>
+        Masse volumique en(kg/m³)
+       </p>
+    </div>
+    <div class="middlet cnt">
+        <img class="img-fluid img-thumbnail" src="https://images.pexels.com/photos/2310904/pexels-photo-2310904.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+    </div>
+    
+    <div class="footer">
+        <code> &#169; Copyright</code>
+    </div>
+    <style>
+        .footer{position: relative;
+                display: flex;
+                width:100%; 
+                margin:0%;
+                padding-left: 5%;
+                align-items: center;
+                height: 4rem;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: gray;
+                background: rgba(224, 222, 82, 0.911); /*2F2526 ~# AD2F4C*/
+                }
+        .middle {
+            float: left;
+            width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+            padding: 10px;
+            margin: 5%;
+            }
+        .middlet {
+            float: right;
+            width: 40%; /* three boxes (use 25% for four, and 50% for two, etc) */
+            padding: 40px;
+            background-color: #967B74;
+            margin: 5%;
+            }
+        .cnt{
+            padding: 3%;
+        }
+        .header{text-align: center;}
+        body{
+            background-color: #F2F0EB;
+        }
+        html{
+            background-color: #CC7385;
+            margin:0%;
+
+        }
+        .ban
+    </style>
+</body>
+</html>
